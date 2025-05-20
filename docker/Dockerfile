@@ -43,5 +43,5 @@ RUN if [ "$with_models" = "true" ]; then  \
   fi
 
 EXPOSE 10000
-CMD ["bash", "-c", "exec ./venv/bin/libretranslate --host 0.0.0.0 --port ${PORT}"]
+ENTRYPOINT [ "./venv/bin/libretranslate", "--host", "*" ]
 
